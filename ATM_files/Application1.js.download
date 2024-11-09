@@ -1,0 +1,44 @@
+let Main_Balance=1000;
+let Mininum_Balance=Main_Balance;
+let pin,remaining,amount,D_amount;
+function
+withdraw()
+{
+   amount= prompt("Enter Amount");
+    if(amount>0&&amount<=Main_Balance)
+    {
+       pin= prompt("Enter pin");
+            if(pin=='123')
+            {
+                console.log("withdraw successful");
+                remaining=Main_Balance-amount;
+                Main_Balance=remaining;
+                console.log("Remaining Balance: "+remaining);
+            }
+            else
+            {
+                console.log("Invalid PIN");
+            }
+    }
+    else
+    {
+        console.log("Insufficient Balance");
+    }
+    
+}
+function deposite()
+{
+   D_amount=parseInt(prompt("enter deposite amount"));
+   pin= prompt("Enter pin");
+    if(pin='123')
+    {
+        console.log("Amount Deposite successful");
+        Main_Balance+=D_amount;
+        console.log("Remaining Balance:"+Main_Balance);
+    }
+}
+function enquiry()
+{
+     alert("Available Balance:"+Main_Balance);
+    console.log("Available Balance:"+Main_Balance);
+}
