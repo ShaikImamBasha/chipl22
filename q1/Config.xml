@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<beans xmlns="http://www.springframework.org/schema/beans" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+xmlns:context="http://www.springframework.org/schema/context" 
+xmlns:p="http://www.springframework.org/schema/p" 
+xmlns:tx="http://www.springframework.org/schema/tx" 
+xsi:schemaLocation="http://www.springframework.org/schema/beans 
+http://www.springframework.org/schema/beans/spring-beans.xsd 
+http://www.springframework.org/schema/context 
+http://www.springframework.org/schema/context/spring-context.xsd 
+http://www.springframework.org/schema/tx 
+http://www.springframework.org/schema/tx/spring-tx.xsd"> 
+<bean id="1" class="com.codinghub.Pro1">
+	<property name="roll" value="101"></property>
+	<property name="name" value="Anusha"></property>
+</bean>
+<bean id="2" class="com.codinghub.Pro1">
+	<property name="roll" value="102"></property>
+	<property name="name" value="Basha"></property>
+</bean>
+<bean id="3" class="com.codinghub.Pro1">
+	<property name="roll" value="103"></property>
+	<property name="name" value="Chasha"></property>
+</bean>
+<bean id="4" class="com.codinghub.Parent">
+<property name="pid" value="11"></property>
+<property name="plocation" value="hyd"></property>
+<property name="pro1" ref="2"></property>
+</bean>
+<bean id="5" class="com.codinghub.College">
+<constructor-arg index="0" value="122"/>
+<constructor-arg index="1" value="SBG"/>
+<constructor-arg index="2" ref="4"/>
+</bean>
+
+
+
+<bean id="6" class="com.codinghub.Audience">
+<property name="aname" value="imam"></property>
+<property name="amobile" value="6304330548"></property>
+</bean>
+<bean id="7" class="com.codinghub.Audience">
+<property name="aname" value="basha"></property>
+<property name="amobile" value="9533974446"></property>
+</bean>
+
+<bean id="8" class="com.codinghub.Gener">
+<property name="mgener" value="Actoin Drama"></property>
+<property name="mbudget" value="300cr"></property>
+</bean>
+<bean id="9" class="com.codinghub.Gener">
+<property name="mgener" value="High voltage Action Drama"></property>
+<property name="mbudget" value="350cr"></property>
+</bean>
+
+<bean id="10" class="com.codinghub.Review">
+<constructor-arg index="0" value="4"/>
+<constructor-arg index="1" value="good"/>
+<constructor-arg index="2" value="average"/>
+</bean>
+<bean id="11" class="com.codinghub.Review">
+<constructor-arg index="0" value="3"/>
+<constructor-arg index="1" value="good"/>
+<constructor-arg index="2" value="good"/>
+</bean>
+<bean id="12" class="com.codinghub.Review">
+<constructor-arg index="0" value="4"/>
+<constructor-arg index="1" value="Peeks"/>
+<constructor-arg index="2" value="good"/>
+</bean>
+
+<bean id="13" class="com.codinghub.Movie">
+<property name="name" value="pushpa"></property>
+<property name="director" value="sukumar"></property>
+<property name="actors">
+        <list>
+            <value>Allu Arjun</value>
+            <value>Rashmika Mandanna</value>
+            <value>Fahadh Faasil</value>
+        </list>
+    </property>
+<property name="Audience" ref="6"></property>
+<property name="Gener" ref="8"></property>
+<property name="Review" ref="10"></property>
+</bean>
+
+<bean id="14" class="com.codinghub.Movie">
+<property name="name" value="Devara"></property>
+<property name="director" value="sivakoratala"></property>
+<property name="actors">
+        <list>
+            <value>NTR</value>
+            <value>JhanviKapoor</value>
+            <value>SaifAliKhan</value>
+        </list>
+    </property>
+<property name="Audience" ref="7"></property>
+<property name="Gener" ref="9"></property>
+<property name="Review" ref="12"></property>
+</bean>
+
+
+<bean id="15" class="com.codinghub.Student11">
+<property name="name" value="devara"></property>
+<property name="section" value="A"></property>
+<property name="marks" value="90"></property>
+<property name="college" value="KLU"></property>
+</bean>
+
+<bean id="16" class="com.codinghub.Employee11">
+<constructor-arg index="0" value="101"></constructor-arg>
+<constructor-arg index="1" value="vara"></constructor-arg>
+<constructor-arg index="2" value="IT"></constructor-arg>
+<constructor-arg index="3" value="200000"></constructor-arg>
+</bean>
+ </beans>
